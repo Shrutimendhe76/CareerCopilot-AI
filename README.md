@@ -1,4 +1,4 @@
-# 💼 AI Resume Tailor & Cover Letter Builder
+# 💼 CareerCopilot-AI
 
 An AI-powered career assistant that helps candidates optimize their resumes for specific job roles by analyzing skill alignment, identifying ATS keyword gaps, recommending profile improvements, and generating personalized cover letters using Google Gemini.
 
@@ -73,7 +73,7 @@ Personalized Career Report
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Resume-Tailor.git
+git clone https://github.com/Shrutimendhe76/CareerCopilot-AI.git
 cd AI-Resume-Tailor
 ```
 

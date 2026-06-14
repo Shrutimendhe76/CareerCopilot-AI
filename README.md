@@ -1,58 +1,67 @@
 # 💼 CareerCopilot-AI
 
-An AI-powered career assistant that helps candidates optimize their resumes for specific job roles by analyzing skill alignment, identifying ATS keyword gaps, recommending profile improvements, and generating personalized cover letters using Google Gemini.
+An AI-powered career assistant that helps candidates optimize their resumes for specific job roles by analyzing skill alignment, identifying ATS keyword gaps, recommending profile improvements, generating personalized cover letters, and creating targeted career development plans using Google Gemini.
 
 ---
 
 ## 🚀 Overview
 
-AI Resume Tailor helps job seekers increase their chances of getting shortlisted by comparing their resume against a target job description and providing actionable recommendations.
+CareerCopilot-AI helps job seekers increase their chances of getting shortlisted by comparing their resume against a target job description and providing actionable recommendations.
 
-The platform uses Google's Gemini AI to perform intelligent resume analysis and generate customized career documents in seconds.
+The platform leverages Google's Gemini AI to perform intelligent resume analysis, ATS optimization, recruiter-style assessments, interview preparation, and personalized learning roadmap generation.
 
 ---
 
 ## ✨ Features
 
-### 📊 ATS Match Analysis
-Evaluates how well a resume aligns with a target job description and highlights important missing keywords.
+### 📊 Comprehensive Profile Suite
+Runs a deep keyword and skill gap analysis against the target role and automatically generates a professional 3-paragraph cover letter tailored to the position.
 
-### 🔍 Skill Gap Detection
-Identifies technical and professional skills that are required for the role but missing from the candidate's profile.
+### 📝 ATS Optimization & Rewriter
+Re-engineers existing experience descriptions, project summaries, and profile sections to maximize ATS compatibility using targeted keywords and impactful action verbs.
 
-### 📝 Resume Improvement Suggestions
-Provides personalized recommendations to strengthen the resume and improve recruiter visibility.
+### 🛣️ 30-Day Skill Gap Roadmap
+Identifies missing skills and generates a detailed week-by-week learning roadmap with actionable project milestones to help candidates bridge knowledge gaps.
 
-### 🎯 Tailored Professional Summary
-Generates an optimized profile summary based on the target role.
+### 🔍 Simulated Recruiter Assessment
+Provides a recruiter-style evaluation highlighting strengths, concerns, and a final hiring recommendation:
 
-### 📄 AI-Generated Cover Letter
-Creates a customized cover letter aligned with the job requirements and candidate background.
+- HIRE
+- MAYBE
+- REJECT
 
-### ⚡ Real-Time AI Processing
-Powered by Google Gemini for fast and context-aware analysis.
+### 🎯 Targeted Interview Preparation
+Creates an interview preparation package containing:
+
+- Technical interview questions with model answers
+- System design and architecture questions
+- Behavioral interview questions using the STAR framework
+
+### 📄 PDF Resume Upload Support
+Upload resumes directly in PDF format and automatically extract content using PyPDF for analysis.
 
 ---
 
 ## 🏗️ System Workflow
 
 ```text
-Resume Input
-      │
-      ▼
-Job Description Input
-      │
-      ▼
-Google Gemini Analysis
-      │
-      ├── ATS Match Evaluation
-      ├── Skill Gap Analysis
-      ├── Resume Recommendations
-      ├── Professional Summary Generation
-      └── Cover Letter Generation
-      │
-      ▼
-Personalized Career Report
+Resume Input (PDF / Manual Entry)
+              │
+              ▼
+Target Job Description
+              │
+              ▼
+Google Gemini Analysis Engine
+              │
+              ├── ATS Optimization
+              ├── Skill Gap Detection
+              ├── Resume Rewriting
+              ├── Recruiter Assessment
+              ├── Interview Preparation
+              └── Learning Roadmap Generation
+              │
+              ▼
+Personalized Career Development Report
 ```
 
 ---
@@ -65,6 +74,7 @@ Personalized Career Report
 | Backend | Python |
 | AI Model | Google Gemini 2.5 Flash |
 | API Integration | Google GenAI SDK |
+| PDF Processing | PyPDF |
 
 ---
 
@@ -74,13 +84,19 @@ Personalized Career Report
 
 ```bash
 git clone https://github.com/Shrutimendhe76/CareerCopilot-AI.git
-cd AI-Resume-Tailor
+cd CareerCopilot-AI
 ```
 
 ### 2. Install Dependencies
 
 ```bash
-pip install streamlit google-genai
+pip install -r requirements.txt
+```
+
+If you are not using a requirements file:
+
+```bash
+pip install streamlit google-genai pypdf
 ```
 
 ### 3. Run the Application
@@ -97,23 +113,18 @@ Generate a Gemini API key from:
 
 https://aistudio.google.com/app/apikey
 
-Enter the API key in the sidebar when launching the application.
+Enter the API key in the sidebar before launching any analysis pipeline.
 
 ---
 
 ## 📖 How to Use
 
 1. Enter your Gemini API Key.
-2. Paste your resume details.
-3. Paste the target job description.
-4. Click **Generate Tailored Analysis & Cover Letter**.
-5. Review:
-   - ATS Match Analysis
-   - Missing Keywords
-   - Skill Gap Report
-   - Resume Improvement Suggestions
-   - Professional Summary
-   - Personalized Cover Letter
+2. Upload your resume PDF or paste profile information manually.
+3. Paste the target job description or internship criteria.
+4. Select your preferred analysis mode from the **Co-Pilot Engine Mode** menu.
+5. Click **Launch Engine**.
+6. Review the AI-generated insights, recommendations, and reports.
 
 ---
 
@@ -125,27 +136,29 @@ Enter the API key in the sidebar when launching the application.
 - Career Switching
 - Resume Optimization
 - ATS Preparation
+- Interview Preparation
+- Skill Development Planning
 
 ---
 
 ## 🔮 Future Enhancements
 
-- PDF Resume Upload Support
-- Resume ATS Score Visualization
-- LinkedIn Profile Optimization
-- Interview Question Generation
-- Downloadable PDF Reports
-- Multi-Role Resume Versions
-- Career Roadmap Recommendations
+- Dynamic ATS score extraction from structured JSON responses
+- Downloadable PDF reports
+- LinkedIn profile optimization
+- Multi-role resume version generation
+- Company-specific interview preparation
+- Application tracking dashboard
+- Voice-based interview simulation
 
 ---
 
 ## 👩‍💻 Team
 
-Developed as part of a hackathon project focused on applying Generative AI to solve real-world career preparation challenges.
+Developed as part of a hackathon project focused on applying Generative AI to solve real-world career preparation and professional development challenges.
 
 ---
 
 ## 🌟 Project Vision
 
-Our goal is to simplify the job application process by helping candidates create stronger, more targeted applications through AI-driven insights and personalized recommendations.
+Our goal is to simplify career preparation by helping candidates build stronger resumes, prepare for interviews, identify skill gaps, and align themselves more effectively with modern hiring requirements through AI-driven insights and personalized recommendations.

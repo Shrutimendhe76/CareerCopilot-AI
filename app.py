@@ -147,16 +147,8 @@ if st.button(f"Launch {analysis_mode} Engine"):
             # Post-Processing UI Rendering based on selected feature
             if analysis_mode == "Comprehensive Profile Suite":
                 raw_text = response.text
-                
-                # Render interactive metrics cleanly
-                m_col1, m_col2, m_col3 = st.columns(3)
-                with m_col1:
-                    st.metric("ATS Match Score", "85%")
-                    st.progress(85)
-                with m_col2:
-                    st.metric("Missing Core Keywords", "4 Skills")
-                with m_col3:
-                    st.metric("Identified Strength Factors", "7 Vectors")
+                st.info("📊 Deep AI Profile Optimization analysis and custom artifacts generated below:")
+              
                 
                 st.markdown("---")
                 st.markdown(raw_text)
